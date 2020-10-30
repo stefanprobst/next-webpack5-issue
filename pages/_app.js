@@ -1,7 +1,9 @@
-import '../styles/globals.css'
+import WebpackProvider from '../components/WebpackContext';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+  return (
+    <WebpackProvider>
+      <Component {...pageProps} />
+    </WebpackProvider>
+  );
 }
-
-export default MyApp
